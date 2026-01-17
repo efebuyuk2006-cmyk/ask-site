@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Bir Sorum Var 💖</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #ffd6e0;
+  text-align: center;
+  padding-top: 100px;
+}
+button {
+  font-size: 20px;
+  padding: 12px 24px;
+  margin: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+#no {
+  background: #ccc;
+  position: absolute;
+}
+</style>
+</head>
+<body>
+
+<h1>Benimle barışır mısın? 💕</h1>
+
+<button id="yes" onclick="yes()">Evet 💖</button>
+<button id="no" onmouseover="move()">Hayır 😒</button>
+
+<script>
+let size = 20;
+function move() {
+  const no = document.getElementById("no");
+  no.style.left = Math.random()*80 + "vw";
+  no.style.top = Math.random()*80 + "vh";
+  size += 4;
+  document.getElementById("yes").style.fontSize = size + "px";
+}
+function yes() {
+  document.body.innerHTML = "<h1>Seni çok seviyorum 💘</h1>";
+}
+</script>
+
+</body>
+</html>
